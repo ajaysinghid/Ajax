@@ -715,7 +715,7 @@ async def auto_filter(client, msg, spoll=False):
             **locals()
         )
     else:
-        cap = f"<b><i>Movie Name : {search}\nRequested By : {message.from_user.mention}\nGroup : {message.chat.title}\nSupport : @advert4u_bot\n\n⚠️Press The Down Buttons To Access The File\n🗑This Post Will Be Deleted After 10 Minutes</i></b>"
+        cap = f"<b><i>Movie Name : {search}\nRequested By : {message.from_user.mention}\nGroup : {message.chat.title}\nSupport : <a href='https://t.me/advert4u_bot'>ADVERT</a>\nMovie Updates : <a href='https://t.me/moviemasala2_0'>Click Me</a>\n\n<code>🗑This Post Will Be Auto Delete After 10 Minutes\n⚠️Press The Down Buttons To Access The File/nAnd Dont Forget To Share our Group to Your Friends</code></i></b>"
 
     if imdb and imdb.get('poster'):
         try:
