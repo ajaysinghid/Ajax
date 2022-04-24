@@ -126,7 +126,7 @@ async def advantage_spoll_choker(bot, query):
             await auto_filter(bot, query, k)
         else:
             k = await query.message.edit('IF YOU DO NOT RECEIVE THE MOVIE/SERIES EVEN AFTER ENTERING THE CORRECT NAME \n\nINFORM ADMIN IN THIS FORMAT TYPE \n👉@ADMIN \nMOVIE/SERIES NAME+LANG+YEAR,\n\nWe Will ⬆️ Upload Within 24 Hours ⏳')
-            await asyncio.sleep(30)
+            await asyncio.sleep(300)
             await k.delete()
 
 
@@ -412,15 +412,15 @@ async def cb_handler(client: Client, query: CallbackQuery):
         )
     elif query.data == "help":
         buttons = [[
-            InlineKeyboardButton('𝗠𝗮𝗻𝘂𝗲𝗹 𝗙𝗶𝗹𝘁𝗲𝗿', callback_data='manuelfilter'),
-            InlineKeyboardButton('𝗔𝘂𝘁𝗼 𝗙𝗶𝗹𝘁𝗲𝗿', callback_data='autofilter')
+            InlineKeyboardButton('Manual Filter', callback_data='manuelfilter'),
+            InlineKeyboardButton('Auto Filter', callback_data='autofilter')
             ],[
-            InlineKeyboardButton('𝗖𝗼𝗻𝗻𝗲𝗰𝘁𝗶𝗼𝗻𝘀', callback_data='coct'),
-            InlineKeyboardButton('𝗘𝘅𝘁𝗿𝗮 𝗠𝗼𝗱𝗲𝘀', callback_data='extra'),
+            InlineKeyboardButton('Connection', callback_data='coct'),
+            InlineKeyboardButton('Extra Modes', callback_data='extra'),
             InlineKeyboardButton('CARBON', callback_data='carbon')
             ],[
-            InlineKeyboardButton('🏠 𝗛𝗼𝗺𝗲 🏠', callback_data='start'),
-            InlineKeyboardButton('⚚ 𝗦𝘁𝗮𝘁𝘀 ⚚', callback_data='stats')
+            InlineKeyboardButton('Home', callback_data='start'),
+            InlineKeyboardButton('Status', callback_data='stats')
         ]] 
         reply_markup = InlineKeyboardMarkup(buttons)
         await query.message.edit_text(
