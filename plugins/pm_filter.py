@@ -92,7 +92,7 @@ async def give_filter(client,message):
                 break 
 
     else:
-        if FILTER_MODE.get(str(message.chat.id)) == "False":
+        if FILTER_MODE.get(str(message.chat.id)) == "True":
             return
         else:
             await auto_filter(client, message)
@@ -151,15 +151,15 @@ async def next_page(bot, query):
         off_set = offset - 10
     if n_offset == 0:
         btn.append(
-            [InlineKeyboardButton("⬅️ 𝗕𝗮𝗰𝗸", callback_data=f"next_{req}_{key}_{off_set}"), InlineKeyboardButton(f"🌹 𝗣𝗮𝗴𝗲 {round(int(offset)/10)+1} / {round(total/10)}", callback_data="pages")]
+            [InlineKeyboardButton("⬅️ 𝗕𝗮𝗰𝗸", callback_data=f"next_{req}_{key}_{off_set}"), InlineKeyboardButton(f" 𝗣𝗮𝗴𝗲 {round(int(offset)/10)+1} / {round(total/10)}", callback_data="pages")]
         )
     elif off_set is None:
-        btn.append([InlineKeyboardButton(f"🌹 𝗣𝗮𝗴𝗲 {round(int(offset)/10)+1} / {round(total/10)}", callback_data="pages"), InlineKeyboardButton("𝗡𝗲𝘅𝘁 ➡️", callback_data=f"next_{req}_{key}_{n_offset}")])
+        btn.append([InlineKeyboardButton(f" 𝗣𝗮𝗴𝗲 {round(int(offset)/10)+1} / {round(total/10)}", callback_data="pages"), InlineKeyboardButton("𝗡𝗲𝘅𝘁 ➡️", callback_data=f"next_{req}_{key}_{n_offset}")])
     else:
         btn.append(
             [
                 InlineKeyboardButton("⬅️ 𝗕𝗮𝗰𝗸", callback_data=f"next_{req}_{key}_{off_set}"),
-                InlineKeyboardButton(f"🌹 𝗣𝗮𝗴𝗲 {round(int(offset)/10)+1} / {round(total/10)}", callback_data="pages"),
+                InlineKeyboardButton(f" 𝗣𝗮𝗴𝗲 {round(int(offset)/10)+1} / {round(total/10)}", callback_data="pages"),
                 InlineKeyboardButton("𝗡𝗲𝘅𝘁 ➡️", callback_data=f"next_{req}_{key}_{n_offset}")
             ],
         )
@@ -190,7 +190,7 @@ async def advantage_spoll_choker(bot, query):
             k = (movie, files, offset, total_results)
             await auto_filter(bot, query, k)
         else:
-            k = await query.message.edit('IF YOU DO NOT RECEIVE THE MOVIE/SERIES EVEN AFTER ENTERING THE CORRECT NAME \n\nINFORM ADMIN IN THIS FORMAT TYPE \n👉@ADMIN \nMOVIE/SERIES NAME+LANG+YEAR,\n\nWe Will ⬆️ Upload Within 24 Hours ⏳')
+            k = await query.message.edit('ιƒ уσυ ∂σηт яє¢єινє тнє мσνιє/ѕєяιєѕ єνєη αƒтєя єηтєяιηg тнє ¢σяяє¢т ηαмє \n\nιηƒσям α∂мιη ιη тнιѕ ƒσямαт\n\n👉@𝐀𝐃𝐌𝐈𝐍\n𝐌𝐎𝐕𝐈𝐄/𝐒𝐄𝐑𝐈𝐄𝐒 𝐍𝐀𝐌𝐄\n𝐋𝐀𝐍𝐆𝐔𝐀𝐆𝐄\n𝐘𝐄𝐀𝐑\n\nωє ωιℓℓ ⬆️ υρℓσα∂ ωιтнιη 24 нσυяѕ ⏳')
             await asyncio.sleep(300)
             await k.delete()
 
