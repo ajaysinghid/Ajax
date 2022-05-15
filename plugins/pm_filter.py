@@ -124,7 +124,7 @@ async def next_page(bot, query):
         btn = [
             [
                 InlineKeyboardButton(
-                    text=f"[{get_size(file.file_size)}] {file.file_name}", callback_data=f'spolling#{user}files#{file.file_id}'
+                    text=f"[{get_size(file.file_size)}] {file.file_name}", callback_data=f'spolling#{user}#{file.file_id}'
                 ),
             ]
             for file in files
@@ -190,7 +190,7 @@ async def advantage_spoll_choker(bot, query):
             k = (movie, files, offset, total_results)
             await auto_filter(bot, query, k)
         else:
-            k = await query.message.edit('⚜️ 𝐌𝐨𝐯𝐢𝐞 𝐍𝐨𝐭 𝐀𝐯𝐚𝐢𝐥𝐚𝐛𝐥𝐞 ⚜️\n\n●𝐎𝐓𝐓 ᴏʀ 𝐃𝐕𝐃 ɴᴏᴛ ʀᴇʟᴇᴀꜱᴇᴅ\n●ᴍᴏᴠɪᴇ ɪꜱ ɴᴏᴛ ᴀᴠᴀɪʟᴀʙʟᴇ ɪɴ ᴛʜᴇ ᴅᴀᴛᴀʙᴀꜱᴇ ꜱᴀʏ ɪɴ ᴏᴜʀ ꜱᴜᴘᴘᴏʀᴛ ᴛᴏ ᴀᴅᴅ ɪɴ ᴅᴀᴛᴀʙᴀꜱᴇ\n𝙿𝚕𝚎𝚊𝚜𝚎 𝚃𝚢𝚙𝚎 𝚒𝚗 𝚃𝚑𝚒𝚜 𝙵𝚘𝚛𝚖𝚊𝚝👇\n\n@𝐚𝐝𝐦𝐢𝐧\n𝐌𝐨𝐯𝐢𝐞/𝐒𝐞𝐫𝐢𝐞𝐬 𝐍𝐚𝐦𝐞\n𝐋𝐚𝐧𝐠𝐮𝐚𝐠𝐞\n𝐘𝐞𝐚𝐫')
+            k = await query.message.edit('⚜️ 𝐌𝐨𝐯𝐢𝐞 𝐍𝐨𝐭 𝐀𝐯𝐚𝐢𝐥𝐚𝐛𝐥𝐞 ⚜️\n\n●𝐎𝐓𝐓 ᴏʀ 𝐃𝐕𝐃 ɴᴏᴛ ʀᴇʟᴇᴀꜱᴇᴅ\n●ᴍᴏᴠɪᴇ ɪꜱ ɴᴏᴛ ᴀᴠᴀɪʟᴀʙʟᴇ ɪɴ ᴛʜᴇ ᴅᴀᴛᴀʙᴀꜱᴇ ꜱᴀʏ ɪɴ ᴏᴜʀ ꜱᴜᴘᴘᴏʀᴛ ᴛᴏ ᴀᴅᴅ ɪɴ ᴅᴀᴛᴀʙᴀꜱᴇ\n𝙿𝚕𝚎𝚊𝚜𝚎 𝚃𝚢𝚙𝚎 𝚒𝚗 𝚃𝚑𝚒𝚜 𝙵𝚘𝚛𝚖𝚊𝚝👇\n\n@admin\n𝐌𝐨𝐯𝐢𝐞/𝐒𝐞𝐫𝐢𝐞𝐬 𝐍𝐚𝐦𝐞\n𝐋𝐚𝐧𝐠𝐮𝐚𝐠𝐞\n𝐘𝐞𝐚𝐫')
             await asyncio.sleep(200)
             await k.delete()
 
@@ -651,7 +651,7 @@ async def auto_filter(client, msg, spoll=False):
         btn = [
             [
                 InlineKeyboardButton(
-                    text=f"[{get_size(file.file_size)}] {file.file_name}", callback_data=f'files#{file.file_id}'
+                    text=f"[{get_size(file.file_size)}] {file.file_name}", callback_data=f'spolling#{user}#{file.file_id}'
                 ),
             ]
             for file in files
