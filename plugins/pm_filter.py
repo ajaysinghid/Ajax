@@ -464,7 +464,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
             InlineKeyboardButton('ᴀᴅᴅ ᴍᴇ ᴛᴏ ʏᴏᴜʀ ɢʀᴏᴜᴘ', url='http://t.me/advertautofilterbot?startgroup=true')
             ],[
            InlineKeyboardButton('Channel', url='https://t.me/moviemasala_official'),
-            InlineKeyboardButton('Group', url='https://t.me/+SGLnHw8GD0gxNWVl')
+            InlineKeyboardButton('Group', url='https://t.me/+Qkd5z54VTTRiZWZl')
             ],[
             InlineKeyboardButton('ʜᴇʟᴘ', callback_data='help'),
             InlineKeyboardButton('ᴀʙᴏᴜᴛ', callback_data='about')
@@ -716,7 +716,7 @@ async def auto_filter(client, msg, spoll=False):
             **locals()
         )
     else:
-        cap = f"<b><i>Movie Name : {search}\nRequested By : {message.from_user.mention}\nGroup : {message.chat.title}\nSupport : <a href='https://t.me/advert4u_bot'>Click Me</a>\nMovie Updates : <a href='https://t.me/moviemasala2_0'>Click Me</a>\n\n\n\n<b>🗑This Post Will Auto Delete After 10 Minutes\n⚠️Press The Down Buttons To Access The File</b></i></b>"
+        cap = f"<b><i>Movie Name : {search}\nRequested By : {message.from_user.mention}\nGroup : {message.chat.title}\nSupport : <a href='https://t.me/advert4u_bot'>Click Me</a>\nMovie Updates : <a href='https://t.me/moviemasala_official>Click Me</a>\n\n\n\n<b>🗑This Post Will Auto Delete After 10 Minutes\n⚠️Press The Down Buttons To Access The File</b></i></b>"
 
     if imdb and imdb.get('poster'):
         try:
