@@ -463,8 +463,8 @@ async def cb_handler(client: Client, query: CallbackQuery):
         buttons = [[
             InlineKeyboardButton('ᴀᴅᴅ ᴍᴇ ᴛᴏ ʏᴏᴜʀ ɢʀᴏᴜᴘ', url='http://t.me/advertautofilterbot?startgroup=true')
             ],[
-           InlineKeyboardButton('Channel', url='https://t.me/moviemasala2_0'),
-            InlineKeyboardButton('Group', url='https://t.me/moviemasala_request')
+           InlineKeyboardButton('Channel', url='https://t.me/moviemasala_official'),
+            InlineKeyboardButton('Group', url='https://t.me/+SGLnHw8GD0gxNWVl')
             ],[
             InlineKeyboardButton('ʜᴇʟᴘ', callback_data='help'),
             InlineKeyboardButton('ᴀʙᴏᴜᴛ', callback_data='about')
