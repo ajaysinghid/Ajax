@@ -1,7 +1,7 @@
 class script(object):
     START_TXT = """Hello 🤞{},
 My Name, <a href='https://t.me/advertautofilterbot'>ADVERT MEDIA BOT</a>, 
-It's very easy just <a href='https://t.me/moviemasala_request'>CLICK ME</a> and type any Movies or Webseries name, that's it i provide your request."""
+It's very easy just <a href='https://t.me/+SGLnHw8GD0gxNWVl'>CLICK ME</a> and type any Movies or Webseries name, that's it i provide your request."""
     HELP_TXT = """𝙷𝙴𝚈 {}
 𝙷𝙴𝚁𝙴 𝙸𝚂 𝚃𝙷𝙴 𝙷𝙴𝙻𝙿 𝙵𝙾𝚁 𝙼𝚈 𝙲𝙾𝙼𝙼𝙰𝙽𝙳𝚂."""
     ABOUT_TXT = """✮ 𝙼𝚈 𝙽𝙰𝙼𝙴: {}
