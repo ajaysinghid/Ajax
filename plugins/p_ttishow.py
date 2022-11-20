@@ -38,7 +38,7 @@ async def save_group(bot, message):
             return
         buttons = [
             [
-                InlineKeyboardButton('💠 CHANNEL 💠', url='https://t.me/moviemasala_official)
+                InlineKeyboardButton('💠 CHANNEL 💠', url='https://t.me/moviemasala_official')
             ],
             [
                 InlineKeyboardButton('♻️ HELP ♻️', url=f"https://t.me/{temp.U_NAME}?start=help")
@@ -46,7 +46,7 @@ async def save_group(bot, message):
             ]
         reply_markup=InlineKeyboardMarkup(buttons)
         await message.reply_text(
-            text=f"<b>Thankyou For Adding Me In {message.chat.title} ❣️\n\nIf You Have Any Questions & Doubts About Using Me Contact Owner ›› @BKC0001.</b>",
+            text=f"<b>Thankyou For Adding Me In {message.chat.title} ❣️\n\nIf You Have Any Questions & Doubts About Using Me Contact Owner ›› @Advert4u</b>",
             reply_markup=reply_markup)
     else:
         for u in message.new_chat_members:
